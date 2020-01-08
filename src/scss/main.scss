@@ -3,7 +3,8 @@
 @import './tools/reset';
 
 @import './components/hamburger';
-@import './components/navigation';
+@import './layout/navigation';
+@import './layout/hero';
 
 *,
 *:before,
@@ -19,4 +20,8 @@ body {
   font-family: $font-primary;
   font-size: 1.6rem;
   line-height: 1.5;
+}
+
+.container {
+  padding-top: 80px;
 }
