@@ -5,6 +5,7 @@
 @import './components/hamburger';
 @import './layout/navigation';
 @import './layout/hero';
+@import './layout/about';
 
 *,
 *:before,
@@ -23,5 +24,29 @@ body {
 }
 
 .container {
+  max-width: 1024px;
+  margin: 0 auto;
   padding-top: 80px;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: $font-size-large;
+  font-weight: $font-weight-regular;
+  text-transform: uppercase;
+  text-align: center;
+
+  &::after {
+    content: '';
+    width: 15%;
+    height: 2px;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-blue;
+  }
 }

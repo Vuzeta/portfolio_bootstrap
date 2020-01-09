@@ -1,0 +1,10 @@
+.about {
+  margin: $margin-between-sections;
+  &__description {
+    margin: 0px 30px;
+    text-align: justify;
+    font-size: $font-size-small;
+    text-indent: 30px;
+    margin-bottom: 20px;
+  }
+}
