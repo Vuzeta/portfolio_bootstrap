@@ -22,7 +22,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[contenthash:10].[ext]',
+              name: '[name].[ext]',
               outputPath: 'assets',
             },
           },

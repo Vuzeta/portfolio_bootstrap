@@ -8,7 +8,10 @@ class Project {
     linkToCode = 'https://github.com/Vuzeta',
     rootElement,
   }) {
-    (this.title = title), (this.tech = tech), (this.img = img), (this.desc = desc);
+    this.desc = desc;
+    this.img = img;
+    this.tech = tech;
+    this.title = title;
     this.linkToLive = linkToLive;
     this.linkToCode = linkToCode;
     this.rootEl = rootElement;
@@ -82,25 +85,45 @@ class Project {
     linkLive.appendChild(desktopIcon);
     descriptionWrapper.appendChild(linkCode);
     linkCode.appendChild(codeIcon);
+
+    this.initProjectHeight(project, headerWrapper);
   };
 
   showContent = e => {
     const btn = e.target;
 
-    const projectHeight = btn.parentNode.parentNode.clientHeight;
-    const imgHeight = btn.parentNode.parentNode.querySelector('.project__image').clientHeight;
-    const descHeight = btn.parentNode.parentNode.querySelector('.project__description-wrapper')
-      .clientHeight;
+    const titleWrapper = this.CalcOuterHightEl(
+      btn.parentNode.parentNode.querySelector('.project__header-wrapper'),
+    );
+    const imgHeight = this.CalcOuterHightEl(
+      btn.parentNode.parentNode.querySelector('.project__image'),
+    );
+    const descHeight = this.CalcOuterHightEl(
+      btn.parentNode.parentNode.querySelector('.project__description-wrapper'),
+    );
 
     if (this.show === false) {
       this.show = !this.show;
       btn.classList.add('project__btn--active');
-      btn.parentNode.parentNode.style.height = `${imgHeight + descHeight + projectHeight + 80}px`;
+      btn.parentNode.parentNode.style.height = `${imgHeight + descHeight + titleWrapper}px`;
     } else {
       this.show = !this.show;
       btn.classList.remove('project__btn--active');
-      btn.parentNode.parentNode.style.height = `85px`;
+      btn.parentNode.parentNode.style.height = `${titleWrapper}px`;
     }
+  };
+
+  CalcOuterHightEl = element => {
+    let height = element.offsetHeight;
+    const style = getComputedStyle(element);
+
+    height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+    return height;
+  };
+
+  initProjectHeight = (project, header) => {
+    const headerHeight = this.CalcOuterHightEl(header);
+    project.style.height = `${headerHeight}px`;
   };
 }
 
