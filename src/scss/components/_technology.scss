@@ -1,0 +1,22 @@
+.technology {
+    &__logo {
+        width: 97px;
+        height: 97px;
+        margin: 20px auto;
+        background-image: url('#{$relative-path}html_icon.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    &__description {
+        width: 80%;
+        margin: 0 auto;
+        font-size: $font-size-small;
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: $font-weight-medium;
+    }
+}
