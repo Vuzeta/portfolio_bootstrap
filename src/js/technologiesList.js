@@ -12,7 +12,14 @@ const initTech = () => {
 		rootEl: rootElement,
 	});
 
-	console.log(tech1);
+	const tech2 = new Technology({
+		title: 'CSS3',
+		imgTitle: 'css',
+		imgExt: 'svg',
+		description:
+			'Kaskadowe arkusze w stylu poznałem w stopniu, który pozwala na swobodne zbudowanie śrtednio-zaawansowanej strony internetowej. Umiem projektować szablony dzięki Flexbox oraz Grid. Często w projektach używam metodologii BEM.',
+		rootEl: rootElement,
+	});
 };
 
 export default initTech;

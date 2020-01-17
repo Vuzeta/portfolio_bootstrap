@@ -20,4 +20,4 @@ links.forEach(link => link.addEventListener('click', linkClicked));
 function importAll(r) {
 	r.keys().forEach(r);
 }
-importAll(require.context('../assets/', true, /\.(png|jpe?g)$/));
+importAll(require.context('../assets/', true, /\.(png|jpe?g|svg)$/));

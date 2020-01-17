@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
@@ -17,6 +18,13 @@ module.exports = {
 				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
 			},
 			{
+				test: /\.svg/,
+				use: {
+					loader: 'svg-url-loader',
+					options: {},
+				},
+			},
+			{
 				test: /\.(png|jpe?g|gif|svg)$/i,
 				use: [
 					{
@@ -24,19 +32,13 @@ module.exports = {
 						options: {
 							name: '[name].[ext]',
 							outputPath: 'assets',
+							publicPath: 'assets',
 						},
 					},
 					{
 						loader: 'image-webpack-loader',
 					},
 				],
-			},
-			{
-				test: /\.svg/,
-				use: {
-					loader: 'svg-url-loader',
-					options: {},
-				},
 			},
 			{
 				test: /\.js$/,
@@ -54,5 +56,11 @@ module.exports = {
 			filename: '[name].css',
 			publicPath: '../',
 		}),
+		// new CopyPlugin([
+		// 	{
+		// 		from: 'src/assets',
+		// 		to: 'assets',
+		// 	},
+		// ]),
 	],
 };
