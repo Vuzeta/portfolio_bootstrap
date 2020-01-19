@@ -1,3 +1,5 @@
+import jumpTo from './jumpTo';
+
 export const toggleHamburger = menu => {
   menu.classList.toggle('is-active');
   showNavList();
@@ -8,7 +10,9 @@ export const showNavList = () => {
   nav.classList.toggle('navigation__menu--active');
 };
 
-export const linkClicked = () => {
+export const linkClicked = e => {
   const hamburger = document.querySelector('.hamburger');
   toggleHamburger(hamburger);
+  let target = e.target.hash;
+  jumpTo(target);
 };
