@@ -74,6 +74,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 8px 8px 11px rgba(0, 0, 0, 0.2);
+
+    @include mq(medium) {
+      width: 380px;
+      margin: 40px auto;
+      height: 250px;
+    }
   }
 
   &__description-wrapper {

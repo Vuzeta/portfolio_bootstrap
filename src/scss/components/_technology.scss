@@ -1,5 +1,10 @@
 .technology {
   margin-bottom: 30px;
+
+  @include mq(medium) {
+    width: 50%;
+  }
+
   &__logo {
     width: 97px;
     height: 97px;

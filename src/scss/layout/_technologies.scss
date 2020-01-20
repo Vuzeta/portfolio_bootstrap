@@ -2,5 +2,10 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
+
+        @include mq(medium) {
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
     }
 }
