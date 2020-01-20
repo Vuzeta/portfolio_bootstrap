@@ -4,7 +4,7 @@ const animateHeader = () => {
 	var position = element.getBoundingClientRect();
 	if (position.top > 0) {
 		element.style.transform = 'scale(1)';
-		photo.style.transform = 'scale(1)';
+		photo.style.transform = 'scale(1.05)';
 	} else if (position.top < -500) {
 		element.style.transform = 'scale(0)';
 		photo.style.transform = 'scale(0)';
