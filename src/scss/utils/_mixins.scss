@@ -14,10 +14,16 @@ $breakpoints: (
   xlarge: (
     min-width: 1280px,
   ),
-  medium-laptop: (
+  small-laptop: (
     min-width: 1366px,
   ),
-  fullHD: (
+  medium-laptop: (
+    min-width: 1440px,
+  ),
+  large-laptop: (
+    min-width: 1536px,
+  ),
+  desktop: (
     min-width: 1920px,
   ),
 );

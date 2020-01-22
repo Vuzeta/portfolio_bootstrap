@@ -28,6 +28,19 @@
       width: 340px;
       height: 340px;
     }
+    @include mq(medium-laptop) {
+      top: -77px;
+      right: -381px;
+      width: 450px;
+      height: 450px;
+    }
+
+    @include mq(desktop) {
+      top: -322px;
+    right: -660px;
+    width: 750px;
+    height: 750px;
+    }    
   }
   &__description {
     margin: 0px 30px;
