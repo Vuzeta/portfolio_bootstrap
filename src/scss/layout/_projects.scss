@@ -2,7 +2,7 @@
   position: relative;
   top: 0;
   left: 0;
-
+  margin: $margin-between-sections;
   &::after {
     content: '';
     position: absolute;
@@ -14,5 +14,19 @@
     border-radius: 50%;
     background-color: rgba(99, 181, 247, 0.7);
     z-index: -1;
+
+    @include mq(medium) {
+      top: 350px;
+      left: -248px;
+      width: 500px;
+      height: 500px;
+      transform: translateX(0%);
+    }
+
+    @include mq(xlarge) {
+      width: 600px;
+      height: 600px;
+      left: -267px;
+    }
   }
 }

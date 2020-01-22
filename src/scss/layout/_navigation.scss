@@ -31,6 +31,11 @@
   &__icon {
     font-size: 2.9rem;
     color: $color-light-black;
+    transition: 0.5s;
+
+    @include mq(medium) {
+      font-size: 2.5rem;
+    }
   }
 
   &__flag--poland {
@@ -105,9 +110,30 @@
   }
 
   &__link {
+    position: relative;
+    top:0;
+    left: 0;
     justify-content: center;
     font-size: $font-size-regular;
     color: $color-light-black;
     text-decoration: none;
+    transition: 0.5s;
+
+    @include mq(large) {
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 20%;
+        // margin: 0 auto;
+        width: 0%;
+        height: 2px;
+        background-color: $color-blue;
+        transition: 0.5s;
+      }
+      &:hover::after {
+        width: 60%;
+      }
+    }
   }
 }

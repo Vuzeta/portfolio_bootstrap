@@ -3,18 +3,22 @@
   top: 0;
   left: 0;
   margin: 20px 5px;
-  // padding: 10px;
+  max-width: 1024px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   border: 2px solid rgba(140, 140, 140, 0.3);
   color: $color-light-black;
-  // height: 99px;
   overflow: hidden;
   transition: 1s;
   background-color: $color-white;
   z-index: 1;
+
+  @include mq(medium) {
+    width: 90%;
+    margin: 20px auto;
+  }
 
   &__header-wrapper {
     width: 80%;
@@ -69,7 +73,7 @@
     @include mq(medium) {
       display: flex;
       justify-content: space-around;
-      margin: 40px 0px 30px;
+      margin: 40px 0px 30px 10px;
     }
   }
 
@@ -104,6 +108,10 @@
     width: 100%;
     margin: 0px 25px 35px;
     text-align: justify;
+
+    @include mq(medium) {
+      font-size: $font-size-small;
+    }
   }
 
   &__link-icon {

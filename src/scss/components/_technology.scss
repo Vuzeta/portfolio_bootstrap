@@ -5,6 +5,10 @@
     width: 50%;
   }
 
+  @include mq(xlarge) {
+    width: 33.33333%;
+  }
+
   &__logo {
     width: 97px;
     height: 97px;

@@ -1,4 +1,6 @@
 .technologies {
+    max-width: 1024px;
+    margin: $margin-between-sections;
     &__wrapper {
         display: flex;
         flex-direction: column;
