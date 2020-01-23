@@ -5,6 +5,7 @@
 @import './components/hamburger';
 @import './components/project';
 @import './components/technology';
+
 @import './layout/navigation';
 @import './layout/hero';
 @import './layout/about';
@@ -16,43 +17,43 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 body {
-  font-family: $font-primary;
-  font-size: 1.6rem;
-  line-height: 1.5;
+	font-family: $font-primary;
+	font-size: 1.6rem;
+	line-height: 1.5;
 }
 
 .container {
-  margin: 0 auto;
-  padding-top: 80px;
-  overflow: hidden;
+	margin: 0 auto;
+	padding-top: 80px;
+	overflow: hidden;
 }
 
 .section-title {
-  margin-bottom: 40px;
-  position: relative;
-  top: 0;
-  left: 0;
-  font-size: $font-size-large;
-  font-weight: $font-weight-regular;
-  text-transform: uppercase;
-  text-align: center;
+	margin-bottom: 40px;
+	position: relative;
+	top: 0;
+	left: 0;
+	font-size: $font-size-large;
+	font-weight: $font-weight-regular;
+	text-transform: uppercase;
+	text-align: center;
 
-  &::after {
-    content: '';
-    width: 15%;
-    height: 2px;
-    position: absolute;
-    bottom: -7px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: $color-blue;
-  }
+	&::after {
+		content: '';
+		width: 15%;
+		height: 2px;
+		position: absolute;
+		bottom: -7px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $color-blue;
+	}
 }
