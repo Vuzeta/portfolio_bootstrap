@@ -12,6 +12,11 @@
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
     transform: scale(0);
     transition: .6s;
+
+    @include mq(desktop) {
+      height: 210px;
+      min-width: 210px;
+    }
   }
 
   &__header {
@@ -24,10 +29,18 @@
 
   &__name {
     font-size: $font-size-Xlarge;
+
+    @include mq(desktop) {
+      font-size: $font-size-Xlarge +1rem;
+    }
   }
 
   &__subtitle {
     font-size: $font-size-medium-large;
+
+    @include mq(desktop) {
+      font-size: $font-size-medium-large + 0.3rem;
+    }
   }
 
   &__name,

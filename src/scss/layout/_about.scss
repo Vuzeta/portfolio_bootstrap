@@ -1,5 +1,4 @@
 .about {
-  // max-width: 1024px;
   position: relative;
   top: 0;
   left: 0;
@@ -37,9 +36,9 @@
 
     @include mq(desktop) {
       top: -322px;
-    right: -660px;
-    width: 750px;
-    height: 750px;
+      right: -743px;
+      width: 850px;
+      height: 850px;
     }    
   }
   &__description {
@@ -57,6 +56,10 @@
     @include mq(xlarge) {
       max-width: 1024px;
       margin: 0px auto 20px;
+    }
+
+    @include mq(desktop) {
+      font-size: $font-size-regular;
     }
   }
 }
