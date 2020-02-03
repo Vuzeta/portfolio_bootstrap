@@ -1,8 +1,8 @@
-# Portfolio
+# Portfolio_Bootstrap
 
 ### Description 
 
-My portfolio, which contains all the information about me, social-media, and projects that I've already implemented or have already implemented.
+My old portfolio created with Bootstrap technology
 
 ------------
 ### Technology used:
@@ -12,11 +12,11 @@ HTML5, CSS3, JavaScript, Bootstrap, Gulp 4, NPM
  ------------
 ### DEMO
 
-https://vuzeta.github.io/Portfolio/
+https://vuzeta.github.io/portfolio_bootstrap/
 
 ------------
 ### CODE
 
-https://github.com/Vuzeta/Portfolio/
+https://github.com/Vuzeta/portfolio_bootstrap/
 
 ------------
